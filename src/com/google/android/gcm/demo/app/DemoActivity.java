@@ -239,6 +239,10 @@ public class DemoActivity extends Activity {
 			if (newMessage.contains("ACCOUNT_MISSING")) {
 				Log.i("ACCOUNT_MISSING--------------", "ACCOUNT_MISSING");
 				ShowMessageBox();
+			} else if (newMessage.contains("PHONE_REGISTRATION_ERROR")) {
+				Toast.makeText(DemoActivity.this, "Registration to GCM failed", Toast.LENGTH_SHORT).show();
+			} else if (newMessage.contains("SERVICE_NOT_AVAILABLE")) {
+				Toast.makeText(DemoActivity.this, "GCM Server not available", Toast.LENGTH_SHORT).show();
 			} else {
 				Toast.makeText(DemoActivity.this, "Successfully registered to GCM", Toast.LENGTH_SHORT).show();
 			}
